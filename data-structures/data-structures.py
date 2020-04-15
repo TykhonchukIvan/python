@@ -29,9 +29,28 @@ def list_method(array):
     print(array)
     array.reverse()
     print(array)
-    return array
+
+    def number_selection(ar):
+        ar_number = [1, 2, 10, 45, 4, 5, 9, 8, 2, 4, 7, 1]
+        list_select = []
+        list_select.extend(ar_number)
+        for el in ar:
+            if type(el) == int:
+                list_select.append(el)
+            else:
+                ar.remove(el)
+        return list_select
+
+    list_select_numb = number_selection(array)
+    print(list_select_numb)
+    list_select_numb.sort()
+    list_select_numb.reverse()
+    pprint(list_select_numb)
+    return list_select_numb
 
 
 list_method(arr)
 
-#tuple
+# tuple
+
+# def tuple_method(tuple):
