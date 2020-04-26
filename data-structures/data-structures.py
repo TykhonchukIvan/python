@@ -96,7 +96,7 @@ def dict_method(dc):
     dc['porsche'][2] = 'Boxster'
     dc['porsche'][3] = '911'
 
-    dc['mercedes'][1] = 'A-Clas'
+    dc['mercedes'][1] = 'A-Class'
     dc['mercedes'][2] = 'AMG GT'
     dc['mercedes'][3] = 'AMG GT Roadster'
 
@@ -148,14 +148,51 @@ def dict_method(dc):
 
     ar_model_car = values_output(dc_values)
     print(ar_model_car)
-
-
-dict_method(dct)
-
-
-# sequence
-print('---sequence')
+    return ar_model_car
 
 
 # set
 print('---set')
+
+
+def set_method():
+    list_one = dict_method(dct)
+
+    def conversion_list(list_arg):
+        list_two = []
+        list_three = []
+        list_four = []
+        list_five = []
+
+        for el_list in list_arg:
+            list_two.append(el_list)
+            if len(list_two) == 15:
+                break
+        for el_list_two in list_two:
+            list_three.append(el_list_two)
+            list_three.reverse()
+            if len(list_three) == 10:
+                break
+        for el_list_three in list_three:
+            list_four.append(el_list_three)
+            list_four.reverse()
+            if len(list_four) == 5:
+                break
+        for el_list_four in list_arg:
+            list_five.append(el_list_four)
+            list_five.reverse()
+            if len(list_five) == 12:
+                break
+
+        list_conversion = list_two + list_three + list_four + list_five
+        return list_conversion
+
+    conversion = conversion_list(list_one)
+    print(conversion)
+    set_list = set(conversion)
+    print(set_list)
+
+
+set_method()
+
+
